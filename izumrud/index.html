@@ -1,0 +1,508 @@
+<!doctype html>
+<!--
+  Шаблон демо-лендинга. Один файл, без сборщиков и зависимостей.
+  build.mjs подставляет значения в фигурные скобки, умеет условные блоки
+  (вопросительный знак перед именем ключа) и повторы по массиву (решётка).
+  Точный синтаксис директив описан в build.mjs. Шаблон только печатает:
+  всё вычисляемое (например price_text) готовит build.mjs.
+
+  Ориентир по уровню — живой сайт автосервиса (крупная типографика, плотные
+  карточки, липкая шапка и кнопка звонка). Блоки, для которых у демо нет
+  данных (марки авто, баллы, этапы ремонта), сюда не добавляются: их пришлось
+  бы выдумать.
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Изумруд — автосервис в Центр, Псков</title>
+<meta name="description" content="Изумруд: Замена масла и технических жидкостей на Октябрьском проспекте: осмотр жидкостей бесплатно, ежедневно 09:00–19:00 Псков, Октябрьский проспект, 50 к2. Телефон +7 995 108-58-83.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23ff6a00%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D0%98%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+
+<div class="demo-strip">
+  Демо-концепт. Это не официальный сайт. Удалим по первой просьбе владельца.
+</div>
+
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logo">Изумруд</span>
+    <span class="top-hours">ежедневно 09:00–19:00</span>
+    <a class="top-phone" href="tel:+79951085883">+7 995 108-58-83</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero reveal">
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        
+        <p class="eyebrow">автосервис · Центр, Псков</p>
+        <h1>Изумруд</h1>
+        <p class="tagline">Замена масла и технических жидкостей на Октябрьском проспекте: осмотр жидкостей бесплатно, ежедневно 09:00–19:00</p>
+
+        <p class="badges">
+          <span class="badge badge-rate">4.7 на 2ГИС · 63 отзыва</span>
+          <span class="badge">ежедневно 09:00–19:00</span>
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-big" href="tel:+79951085883">Позвонить</a>
+          
+          <a class="btn btn-line" href="https://yandex.ru/maps/?rtext=~%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%2C%20%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2050%20%D0%BA2" target="_blank" rel="noopener">Маршрут</a>
+        </div>
+        <p class="hero-phone"><a href="tel:+79951085883">+7 995 108-58-83</a></p>
+      </div>
+
+      
+      <figure class="hero-photo">
+        <img src="foto-1.jpg" alt="здание автосервиса «Изумруд» с вывеской и машинами у входа" loading="eager">
+      </figure>
+      
+    </div>
+  </section>
+
+  
+
+  
+  <section class="facts-strip reveal">
+    <div class="wrap">
+      <ul class="facts">
+        <li><b>4.7</b><span>рейтинг на 2ГИС</span></li><li><b>63</b><span>отзыва на 2ГИС</span></li><li><b>24</b><span>направлений работ</span></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  
+  <section class="wrap block reveal">
+    <p class="eyebrow">Прайс из карточки на 2ГИС</p>
+    <h2>Услуги и цены</h2>
+    <div class="cards">
+      
+      <article class="card">
+        <h3>Замена масла и фильтров</h3>
+        
+        <p class="card-price">Бесплатно</p>
+      </article>
+      
+      <article class="card">
+        <h3>Диагностика тех.жидкостей</h3>
+        
+        <p class="card-price">Бесплатно</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена масла в МКПП</h3>
+        
+        <p class="card-price">1 000–1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена масла в ДСГ (роботе)</h3>
+        
+        <p class="card-price">2 000–2 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Снятие-установка защиты</h3>
+        
+        <p class="card-price">от 300 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена масла в раздаточной коробке</h3>
+        
+        <p class="card-price">1 000–1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена масла в переднем мосту (редукторе)</h3>
+        
+        <p class="card-price">1 000–1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Полная замена декстрона в АКПП</h3>
+        
+        <p class="card-price">2 500–3 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Частичная замена декстрона в АКПП</h3>
+        
+        <p class="card-price">2 000–2 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Полная замена антифриза с промывкой (через аппарат)</h3>
+        
+        <p class="card-price">2 500–3 000 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена топливного фильтра (бензин)</h3>
+        
+        <p class="card-price">1 000–1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена свечи зажигания (за шт.)</h3>
+        
+        <p class="card-price">300–375 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Полная замена тормозной жидкости (через аппарат)</h3>
+        
+        <p class="card-price">2 500–3 000 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Полная замена жидкости ГУР (через аппарат)</h3>
+        
+        <p class="card-price">2 500–3 000 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Компьютерная диагностика</h3>
+        
+        <p class="card-price">500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена передних тормозных колодок</h3>
+        
+        <p class="card-price">от 1 000 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена задних тормозных колодок</h3>
+        
+        <p class="card-price">от 1 200 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена аккумулятора</h3>
+        
+        <p class="card-price">300 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена передних стоек амортизаторов</h3>
+        
+        <p class="card-price">от 1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена задних стоек амортизаторов</h3>
+        
+        <p class="card-price">от 1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена стоек стабилизатора</h3>
+        
+        <p class="card-price">от 700 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Замена переднего подшипника ступицы</h3>
+        
+        <p class="card-price">от 2 000 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Регулировка углов сход-развал</h3>
+        
+        <p class="card-price">от 1 500 ₽</p>
+      </article>
+      
+      <article class="card">
+        <h3>Заправка кондиционера</h3>
+        
+        <p class="card-price">от 2 000 ₽</p>
+      </article>
+      
+    </div>
+    
+    <p class="note">Цены — из карточки в 2ГИС, итоговую сумму согласуют до начала работ. Телефон: +7 995 108-58-83.</p>
+    
+    
+  </section>
+  
+
+  
+  <section class="wrap block reveal">
+    <p class="eyebrow">Так пишут о нас в отзывах на 2ГИС</p>
+    <h2>Что мы делаем для вас</h2>
+    <ul class="praise">
+      <li>Подбираем масло и фильтр под конкретный двигатель и пробег</li><li>Не навязываем лишнего: если запас колодок ещё есть, так и скажем</li><li>Принимаем без очереди — в том числе тех, кто заехал проездом</li><li>Есть зона ожидания, где можно выпить кофе, пока идёт работа</li>
+    </ul>
+  </section>
+  
+
+  
+  <section class="wrap block reveal">
+    <p class="eyebrow">Фото сервиса</p>
+    <h2>Как это выглядит</h2>
+    <div class="gallery">
+      <figure><img src="foto-1.jpg" alt="здание автосервиса «Изумруд» с вывеской и машинами у входа" loading="lazy"></figure><figure><img src="foto-2.jpg" alt="вид на автосервис с улицы: вывеска и зелёные ворота боксов" loading="lazy"></figure><figure><img src="foto-3.jpg" alt="боксы автосервиса: распахнутые ворота и машина на въезде" loading="lazy"></figure><figure><img src="foto-4.jpg" alt="автомобиль с открытым капотом в ремонтном боксе" loading="lazy"></figure><figure><img src="foto-5.jpg" alt="машину привезли в сервис на эвакуаторе" loading="lazy"></figure>
+    </div>
+  </section>
+  
+
+  
+  <section class="wrap block reveal">
+    <p class="eyebrow">63 отзыва в карточке</p>
+    <h2>Что говорят клиенты</h2>
+    <div class="reviews">
+      
+      <a class="review" href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">
+        <p>Был проездом в Пскове, нужно было поменять масло: записали на ближайшее время, через час машину отдали.</p>
+        <footer>июль 2026 · 2ГИС ↗</footer>
+      </a>
+      
+      <a class="review" href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">
+        <p>Записался на замену колодок: мастер сказал, что запас ещё есть и менять смысла нет, заодно осмотрел жидкости.</p>
+        
+      </a>
+      
+      <a class="review" href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">
+        <p>В субботу вечером пробило бензобак: дождались, заказали деталь, в понедельник отдали машину.</p>
+        
+      </a>
+      
+      <a class="review" href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">
+        <p>На сход-развале раскрутили все закисшие болты и всё выставили.</p>
+        
+      </a>
+      
+      <a class="review" href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">
+        <p>Замена масла в АКПП: сделали быстро, поменяли шайбы и смазали болты на защите.</p>
+        
+      </a>
+      
+    </div>
+    <p class="note">Отзывы пересказаны по материалам <a href="https://2gis.ru/pskov/firm/70000001021573962" target="_blank" rel="noopener">карточки на 2ГИС</a>. Нажмите на отзыв — откроется карточка.</p>
+  </section>
+  
+
+  
+  <section class="wrap block reveal">
+    <p class="eyebrow">Коротко о главном</p>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details><summary>Где вы находитесь?</summary><p>Псков, Октябрьский проспект, 50 к2.</p></details><details><summary>Когда вы работаете?</summary><p>ежедневно 09:00–19:00.</p></details><details><summary>Чем вы занимаетесь?</summary><p>Замена масла и фильтров, Диагностика тех.жидкостей, Замена масла в МКПП, Замена масла в ДСГ (роботе), Снятие-установка защиты, Замена масла в раздаточной коробке, Замена масла в переднем мосту (редукторе), Полная замена декстрона в АКПП, Частичная замена декстрона в АКПП, Полная замена антифриза с промывкой (через аппарат), Замена топливного фильтра (бензин), Замена свечи зажигания (за шт.), Полная замена тормозной жидкости (через аппарат), Полная замена жидкости ГУР (через аппарат), Компьютерная диагностика, Замена передних тормозных колодок, Замена задних тормозных колодок, Замена аккумулятора, Замена передних стоек амортизаторов, Замена задних стоек амортизаторов, Замена стоек стабилизатора, Замена переднего подшипника ступицы, Регулировка углов сход-развал, Заправка кондиционера.</p></details><details><summary>Как записаться?</summary><p>Позвоните по телефону +7 995 108-58-83.</p></details>
+    </div>
+  </section>
+  
+
+  <section class="wrap block reveal">
+    <p class="eyebrow">Контакты</p>
+    <h2>Где мы и когда работаем</h2>
+    <div class="contacts">
+      <div>
+        <p class="contact-line"><b>Адрес:</b> Псков, Октябрьский проспект, 50 к2</p>
+        <p class="contact-line"><b>Часы:</b> ежедневно 09:00–19:00</p>
+        <p class="contact-line"><b>Телефон:</b> <a href="tel:+79951085883">+7 995 108-58-83</a></p>
+        
+        <p class="contact-line"><b>Мы есть в соцсетях:</b></p>
+        <div class="socials">
+          <a href="https://vk.ru/public191377382" target="_blank" rel="noopener">ВКонтакте</a><a href="mailto:izumrud.sto@mail.ru" target="_blank" rel="noopener">Почта</a>
+        </div>
+        
+        <p class="cta"><a class="btn" href="tel:+79951085883">Позвонить</a></p>
+      </div>
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%2C%20%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2050%20%D0%BA2&z=17" title="Карта" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="map-link"><a href="https://yandex.ru/maps/?rtext=~%D0%9F%D1%81%D0%BA%D0%BE%D0%B2%2C%20%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2050%20%D0%BA2" target="_blank" rel="noopener">Открыть карту и построить маршрут →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final reveal">
+    <div class="wrap">
+      <h2>Нужен ремонт? Позвоните</h2>
+      <p class="tagline">Скажите, что случилось с машиной — подскажем по срокам и цене.</p>
+      <p class="cta"><a class="btn btn-big" href="tel:+79951085883">+7 995 108-58-83</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Изумруд, Псков · Октябрьский проспект, 50 к2</p>
+    <p class="small">Часы работы: ежедневно 09:00–19:00.</p>
+    <p class="small">Демонстрационная концепция сайта. Не является официальным сайтом
+    организации. Связаться по вопросу публикации или удаления страницы — по телефону выше.</p>
+  </div>
+</footer>
+
+<a class="call-float" href="tel:+79951085883" aria-label="Позвонить">Позвонить</a>
+
+<style>
+  :root{--ink:#0f1319;--dim:#5d6772;--line:#e3e8ee;--soft:#f4f6f9;
+        --steel:#151b22;--hair:rgba(255,255,255,.13);
+        --accent:#ff6a00;--accent-d:#dc5a00;--accent-l:#ff7d1f;
+        --btn-ink:#fff;--btn-end:var(--accent-d);--btn-hover-1:var(--accent-d);--btn-hover-2:#c25100;--float-end:var(--accent-d);
+        --hero-1:#1d252e;--hero-2:#131920;--hero-3:#0b0f13;
+        --stripe:rgba(255,255,255,.05);--glow:rgba(255,106,0,.32)}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:76px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  h1,h2{line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
+  h1{font-size:clamp(30px,7vw,54px);text-transform:uppercase}
+  h2{font-size:clamp(22px,4vw,34px)}
+  a{color:inherit}
+  b{font-weight:600}
+  .eyebrow{color:var(--accent-d);font-size:13px;font-weight:700;text-transform:uppercase;
+        letter-spacing:.1em;margin:0 0 8px}
+
+  .demo-strip{background:var(--steel);color:var(--accent-l);font-size:13px;text-align:center;padding:8px 14px}
+
+  .top{position:sticky;top:0;z-index:40;background:var(--steel);border-bottom:1px solid var(--hair)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 20px}
+  .logo{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+  .logo-img{display:block;width:34px;height:34px;border-radius:50%}
+  .top-hours{color:#94a2af;font-size:13px;margin-left:auto}
+  .top-phone{color:var(--accent-l);font-weight:700;text-decoration:none;white-space:nowrap}
+
+  /* тёмный герой с косой штриховкой и оранжевым свечением */
+  .hero{position:relative;overflow:hidden;color:#fff;padding:48px 0;
+        background:linear-gradient(165deg,var(--hero-1) 0%,var(--hero-2) 55%,var(--hero-3) 100%)}
+  .hero::before{content:"";position:absolute;inset:-30% -10%;pointer-events:none;
+        background:repeating-linear-gradient(115deg,var(--stripe) 0 12px,transparent 12px 30px)}
+  .hero::after{content:"";position:absolute;right:-130px;top:-150px;width:440px;height:440px;border-radius:50%;pointer-events:none;
+        background:radial-gradient(circle,var(--glow),transparent 68%)}
+  .hero-in{position:relative;z-index:1;display:grid;gap:28px}
+  .hero-logo{display:block;width:84px;height:84px;border-radius:50%;margin:0 0 16px;
+        border:2px solid var(--accent);box-shadow:0 0 28px var(--glow)}
+  .hero .eyebrow{color:var(--accent-l)}
+  .hero .tagline{color:#c7d1db;font-size:clamp(17px,2.4vw,21px);max-width:52ch;margin:0 0 20px}
+  .hero .badge{background:rgba(255,255,255,.07);border-color:var(--hair);color:#e7edf3}
+  .hero .badge-rate{border-color:var(--accent);color:var(--accent-l)}
+  .hero .btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+  .hero .btn-line:hover{background:rgba(255,255,255,.12)}
+  .hero-photo{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--hair);align-self:start}
+  .hero-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+  .hero-phone{margin:16px 0 0;font-size:clamp(19px,3vw,24px);font-weight:700}
+  .hero-phone a{text-decoration:none}
+  .brand-banner{padding:26px 0 0}
+  .brand-banner img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 16px 40px rgba(15,19,25,.12)}
+
+  .tagline{color:var(--dim);font-size:17px;max-width:60ch;margin:0 0 18px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
+  .badge-rate{border-color:var(--accent);color:var(--accent-d);font-weight:600}
+  .socials{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+  .socials a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;
+       color:var(--accent-d);text-decoration:none;background:#fff}
+  .socials a:hover{border-color:var(--accent);background:var(--soft)}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+  .btn{display:inline-block;background:linear-gradient(180deg,var(--btn-base,var(--accent-l)),var(--btn-end));color:var(--btn-ink);text-decoration:none;font-weight:700;
+       padding:13px 24px;border-radius:8px;border:0;box-shadow:0 6px 16px var(--glow)}
+  .btn:hover{background:linear-gradient(180deg,var(--btn-hover-1),var(--btn-hover-2))}
+  .btn-line{background:#fff;color:var(--accent-d);border:2px solid var(--accent);padding:11px 20px;box-shadow:none}
+  .btn-big{font-size:clamp(17px,2.4vw,20px);padding:16px 30px}
+
+  .block{padding:52px 0;border-bottom:1px solid var(--line)}
+  .praise{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .praise li{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .praise li::before{content:"✓ ";color:var(--accent);font-weight:700}
+
+  .facts-strip{background:var(--soft);border-bottom:1px solid var(--line);padding:22px 0}
+  .facts{list-style:none;padding:0;margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .facts li{display:flex;flex-direction:column;gap:2px}
+  .facts b{font-size:clamp(24px,4.4vw,34px);line-height:1.1;letter-spacing:-.02em}
+  .facts span{color:var(--dim);font-size:14px}
+
+  .cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fff;
+       display:flex;flex-direction:column;gap:10px;transition:box-shadow .18s ease,transform .18s ease}
+  .card:hover{box-shadow:0 10px 24px rgba(15,19,25,.09);transform:translateY(-2px)}
+  .card h3{margin:0;font-size:18px;line-height:1.3}
+  .card-items{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+  .card-items li{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:14px;color:var(--dim)}
+  .card-price{margin:auto 0 0;font-weight:700;font-size:21px;color:var(--accent-d);letter-spacing:-.01em}
+
+  .faq{max-width:760px}
+  .faq details{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq details:first-child{border-top:1px solid var(--line)}
+  .faq summary{cursor:pointer;font-weight:600;font-size:17px}
+  .faq summary::marker{color:var(--accent)}
+  .faq p{margin:12px 0 0;color:var(--dim)}
+  .note{color:var(--dim);font-size:14px;margin-top:16px}
+
+  .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .gallery figure{margin:0}
+  .gallery img{width:100%;height:210px;object-fit:cover;border-radius:12px;display:block}
+
+  .reviews{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .review{display:block;text-decoration:none;background:var(--soft);border:1px solid var(--line);
+       border-left:3px solid var(--accent);border-radius:12px;padding:18px;
+       transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+  .review:hover{transform:translateY(-2px);background:#fff;box-shadow:0 10px 24px rgba(15,19,25,.10)}
+  .review p{margin:0}
+  .review footer{color:var(--dim);font-size:13px;margin-top:12px;font-weight:600}
+
+  .contacts{display:grid;gap:26px;grid-template-columns:1fr 1fr;align-items:start}
+  .contact-line{margin:0 0 10px}
+  .map iframe{width:100%;height:280px;border:1px solid var(--line);border-radius:12px;display:block}
+  .map-link{margin:12px 0 0;font-size:14px}
+
+  .final{background:linear-gradient(160deg,var(--hero-1),var(--hero-3));color:#fff;padding:56px 0;text-align:center}
+  .final .tagline{color:#c7d1db;margin:0 auto 22px}
+  .final .cta{justify-content:center}
+  .foot{background:#0a0d11;color:#aeb8c2;padding:26px 0}
+  .foot p{margin:4px 0}
+  .small{font-size:13px;opacity:.75}
+
+  .call-float{position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(180deg,var(--accent-l),var(--float-end));color:var(--btn-ink);
+       text-align:center;font-weight:700;padding:16px;border-radius:10px;text-decoration:none;z-index:50;
+       box-shadow:0 6px 20px rgba(0,0,0,.28)}
+
+  /* появление секций при прокрутке; без JS класс .js не ставится и всё видно сразу */
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+  .js .reveal.is-in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+
+  @media (min-width:820px){
+    .hero{padding:64px 0}
+    .hero-in{grid-template-columns:1.15fr .85fr;align-items:center;gap:40px}
+    .call-float{display:none}
+  }
+  @media (max-width:819px){
+    body{padding-bottom:88px}
+    .contacts{grid-template-columns:1fr}
+    .top-hours{display:none}
+    .hero{padding:32px 0}
+    .hero-photo img{aspect-ratio:16/10}
+    .block{padding:36px 0}
+  }
+  
+</style>
+
+<script>
+  var sections = document.querySelectorAll("main section");
+  if (!("IntersectionObserver" in window)) {
+    for (var i = 0; i < sections.length; i++) sections[i].classList.add("is-in");
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "-60px 0px -40px 0px" });
+    for (var j = 0; j < sections.length; j++) io.observe(sections[j]);
+  }
+</script>
+
+</body>
+</html>
